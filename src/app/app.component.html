@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-icon>cloud</mat-icon>
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<main class="content">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>¡Bienvenido!</mat-card-title>
+      <mat-card-subtitle>Aplicación de Angular generada por Gemini</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Esta es una aplicación de demostración para mostrar el despliegue en Google Cloud Run.</p>
+      <p>
+        El entorno actual es: <strong>{{ environmentName }}</strong>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</main>
+
+<router-outlet></router-outlet>

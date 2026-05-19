@@ -1,0 +1,17 @@
+name: Deploy to Google Cloud Run - Reuse Workflow
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  workflow:
+    uses: aldower/dso-templates/.github/workflows/angular.yaml@main
+    with:
+      gcp_project_id: "hale-monument-477117-k8"
+      gcp_artifact_repo: "cna-registry"
+      cr_service_name: "gemini-angular-app"
+    secrets: inherit
