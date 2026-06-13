@@ -19,7 +19,7 @@ export class ConfigService {
       this.config = await firstValueFrom(this.http.get<AppConfig>('/config.json'));
     } catch (error) {
       console.error('Could not load configuration', error);
-      // Provide a default config in case of error
+      // Provide a default config in case of errors
       this.config = { environmentName: 'development (local)' };
     }
   }
